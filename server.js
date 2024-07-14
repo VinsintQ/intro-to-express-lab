@@ -53,9 +53,9 @@ app.get("/shoes", (req, res) => {
   let array = [];
   // && elem.price <= maxPrice && elem.type == type
   shoes.forEach((elem) => {
-    if (elem.price <= minPrice) {
+    if (elem.price >= minPrice) {
       array += `name : ${elem.name}    price : ${elem.price}    type : ${elem.type} <br>`;
-    } else if (elem.price >= maxPrice) {
+    } else if (elem.price <= maxPrice) {
       array += `name : ${elem.name}    price : ${elem.price}    type : ${elem.type} <br>`;
     } else if (elem.type == type) {
       array += `name : ${elem.name}    price : ${elem.price}    type : ${elem.type} <br>`;
